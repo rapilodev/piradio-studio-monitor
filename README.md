@@ -1,4 +1,5 @@
 # Piradio Studio Monitor
+![Logo](images/logo.svg)
 
 ## Overview
 
@@ -9,7 +10,6 @@ Piradio Studio Monitor is an application for displaying the current radio schedu
 - **Current Schedule Display**: Shows the current 88vier FM radio schedule with broadcast times and program details.
 - **Real-time Audio Monitoring**: Monitors the peak and loudness levels in the Piradio studio in real-time.
 
-![Logo](images/logo.svg)
 ![Screenshot](images/up.png)
 
 ## Installation
