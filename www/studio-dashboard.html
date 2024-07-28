@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
+    <link rel="stylesheet" href="studio-dashboard.css">
+    <script src="studio-dashboard.js"></script>
+</head>
+
+<body>
+    <div id="container">
+        <img id="event-img"></img>
+        <div id="event-time"></div>
+        <div id="event-title"></div>
+
+        <progress id="event-progress" value="0" max="100"></progress>
+
+        <div id="time" class="clock card">
+            <svg id="clock1" xmlns="http://www.w3.org/2000/svg"></svg>
+        </div>
+
+        <div id="running" class="clock card">
+            <svg id="clock2" xmlns="http://www.w3.org/2000/svg"></svg>
+        </div>
+
+        <div id="event" class="card">
+            <div id="event-excerpt"></div>
+        </div>
+    </div>
+
+    <div id="meters">
+        <div id="in-left" class="bar card hidden">
+            <div id="peak">
+                <div id="peakLabel"></div>
+                <div id="rms">
+                    <div id="rmsLabel"></div>
+                    In L
+                </div>
+            </div>
+        </div>
+        <div id="in-right" class="bar card hidden">
+            <div id="peak">
+                <div id="peakLabel"></div>
+                <div id="rms">
+                    <div id="rmsLabel"></div>
+                    In R
+                </div>
+            </div>
+        </div>
+
+        <div id="out-left" class="bar card">
+            <div id="peak">
+                <div id="peakLabel"></div>
+                <div id="rms">
+                    <div id="rmsLabel"></div>
+                    Main L
+                </div>
+            </div>
+        </div>
+        <div id="out-right" class="bar card">
+            <div id="peak">
+                <div id="peakLabel"></div>
+                <div id="rms">
+                    <div id="rmsLabel"></div>
+                    Main R
+                </div>
+            </div>
+        </div>
+    </div>
+
+</body>
+</html>
+

@@ -1,0 +1,207 @@
+@font-face {
+    font-family: 'Roboto';
+    font-style: normal;
+    font-weight: 400;
+    src: local('Roboto'), local('Roboto-Regular'),
+         url('fonts/roboto-v18-latin_latin-ext-regular.woff2') format('woff2');
+}
+
+@font-face {
+  font-family: 'DSEG7-Classic';
+  src: url('fonts/DSEG7Classic-Regular.woff2') format('woff2'),
+  font-weight: normal;
+  font-style: normal;
+}
+
+* {
+    color: #fff;
+    font-family: 'Roboto', sans-serif;
+    padding: 0;
+    margin: 0;
+    transition: all 1s;
+    user-select: none;
+}
+
+body {
+    background: #003;
+    display: flex;
+    flex-direction:row;
+    justify-content: space-around;
+    align-items: center;
+    width: 100vw;
+    height: 100vh;
+    overflow: hidden;
+    gap: 5vmin;
+}
+
+#container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    align-items: center;
+    height: 100vh;
+}
+
+#meters {
+    display: flex;
+    background: #004;
+    padding: 1%;
+}
+
+#event {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    width:100%;
+}
+
+#event-img {
+    width:8vmin;
+    height:auto;
+    margin:2%;
+    border-radius:99vw;
+}
+
+#event-time {
+    margin-right:1vmin;
+    font-size: 4vmin;
+    text-align:center;
+}
+
+#event-title {
+    font-size: 3vmin;
+    text-align:center;
+}
+
+#event-excerpt {
+    font-size: 2vmin;
+    text-align: center;
+    display: flex;
+    flex-direction:column;
+    width: 100%;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+
+}
+
+text tspan{
+    font-family: 'DSEG7-Classic';
+    padding: 1vmax;
+}
+
+.ending #clock2 text tspan,
+.ending #clock2 circle.second.active {
+    fill: red;
+}
+
+#event-excerpt .details {
+    overflow-y: scroll;
+    -webkit-overflow-scrolling: touch;
+}
+
+#event-excerpt .running .title {
+    font-weight: bold;
+}
+
+#event-excerpt .stopped a {
+    color: #ccc;
+}
+
+#event-progress {
+    width: 100%;
+}
+
+.bar {
+    text-align: center;
+    width: 8vmin;
+    height: 100vh;
+    overflow: hidden;
+    position: relative;
+    padding: 1vmin;
+    cursor: pointer;
+}
+
+#rms, #peak {
+    font-size: 2vmin;
+    width: 100%;
+    position: absolute;
+    bottom: 0;
+    height: 0%;
+    transition: height 1s linear;
+}
+
+#rmsLabel, #peakLabel {
+    font-size:4vmin;
+    padding:1vmin;
+    text-shadow: 0px 0px 2vmin black;
+    white-space: nowrap;
+} 
+
+#peak {
+    color: black;
+    background: #66ff66;
+}
+
+#peak.mediumPeak {
+    background: yellow !important;
+}
+
+#peak.loudPeak {
+    background: red !important;
+}
+
+#rms.loudRms {
+    background: red !important;
+}
+
+#rms.silent {
+    color: black;
+    background: yellow;
+}
+
+#rms {
+    color: white;
+    background: green;
+}
+
+.hidden{
+    display: none;
+}
+
+#in-right {
+    margin-left: 0.5vmax;
+    margin-right: 1vmax;
+}
+
+#out-right {
+    margin-left: 0.5vmax;
+}
+
+.content {
+    width: 100%;
+}
+
+/** Clock Styles **/
+
+.fivemin, .second, tspan {
+    fill: #ccc;
+}
+
+.second.active {
+    transition: fill 0.05s;
+}
+
+#clock1 .second.active,
+#clock1 tspan {
+    fill: #00ff00;
+}
+
+#clock2 .second.active,
+#clock2 tspan {
+    fill: #ffff00;
+}
+
