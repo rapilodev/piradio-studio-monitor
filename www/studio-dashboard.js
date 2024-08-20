@@ -118,8 +118,8 @@ const showLevel = async () => {
         ["in","out"].forEach(dir => {
             ["left", "right"].forEach(channel => {
                 setChannel(
-                    `#${dir}-${channel} #peak`, data[dir][`peak-${channel}`], 
-                    `#${dir}-${channel} #rms`, data[dir][`rms-${channel}`]
+                    `#${dir}-${channel} #peak`, data[dir]['peak'][channel],
+                    `#${dir}-${channel} #rms`,  data[dir]['rms'][channel]
                 );
             });
         });
